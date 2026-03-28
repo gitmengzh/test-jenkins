@@ -43,7 +43,14 @@ pipeline {
         stage('Install') {
             steps {
                 echo '安装依赖...'
-                sh 'pip install -r requirements.txt'
+//                 sh 'pip install -r requirements.txt'
+                  sh '''
+                        python3 -m venv venv
+                        . venv/bin/activate
+                        pip install -r requirements.txt
+                        # 后续运行测试或脚本也要在激活环境的状态下
+                        python main.py
+                    '''
             }
         }
 
