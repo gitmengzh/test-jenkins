@@ -29,7 +29,7 @@ pipeline {
     agent any
 
     environment {
-        FEISHU_WEBHOOK = 'https://open.feishu.cn/open-apis/bot/v2/hook/27afc8b5-1b76-44f6-b3e8-75f7e604bf04000'
+        FEISHU_WEBHOOK = 'https://open.feishu.cn/open-apis/bot/v2/hook/27afc8b5-1b76-44f6-b3e8-75f7e604bf04'
     }
 
     stages {
